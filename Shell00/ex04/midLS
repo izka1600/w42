@@ -1,2 +1,1 @@
-ls -tp | tr '\n' ', ' | sed 's/,$//'
-
+ls -tpm
