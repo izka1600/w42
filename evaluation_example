@@ -1,0 +1,77 @@
+c2r2s2% cd
+c2r2s2% ls
+Desktop    Downloads  Music	Public	   Videos
+Documents  goinfre    Pictures	Templates  w42
+c2r2s2% git clone git@vogsphere.42warsaw.pl:vogsphere/intra-uuid-48592979-3286-41b4-9ab8-bbe88643c2e6-6094247-ikoszela ew
+Cloning into 'ew'...
+remote: Enumerating objects: 25, done.
+remote: Counting objects: 100% (25/25), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 25 (delta 2), reused 0 (delta 0)
+Receiving objects: 100% (25/25), done.
+Resolving deltas: 100% (2/2), done.
+c2r2s2% ls
+Desktop    Downloads  goinfre  Pictures  Templates  w42
+Documents  ew	      Music    Public	 Videos
+c2r2s2% cd ew
+c2r2s2% ls
+ex00  ex01  ex02  ex03	ex04  ex05
+c2r2s2% cd ex00
+c2r2s2% ls
+z
+c2r2s2% cat z
+Z
+c2r2s2% cd ..
+c2r2s2% cd ex01
+c2r2s2% ls
+testShell00.tar
+c2r2s2% tar -xvf testShell00.tar
+testShell00
+c2r2s2% ls -l
+total 16
+-r--r-xr-x 1 ikoszela 2024_warsaw    40 Jun  1 23:42 testShell00
+-rw-r--r-- 1 ikoszela 2024_warsaw 10240 Oct  7 12:26 testShell00.tar
+c2r2s2% cd ..
+c2r2s2% cd ex02
+c2r2s2% ls
+exo2.tar
+c2r2s2% tar -xvf exo2.tar
+test0/
+test1
+test2/
+test3
+test4
+test5
+test6
+c2r2s2% ls -l
+total 36
+-rw-r--r-- 1 ikoszela 2024_warsaw 10240 Oct  7 12:26 exo2.tar
+drwx--xr-x 2 ikoszela 2024_warsaw  4096 Jun  1 20:47 test0
+-rwx--xr-- 1 ikoszela 2024_warsaw     4 Jun  1 21:46 test1
+dr-x---r-- 2 ikoszela 2024_warsaw  4096 Jun  1 22:45 test2
+-r-----r-- 2 ikoszela 2024_warsaw     1 Jun  1 23:44 test3
+-rw-r----x 1 ikoszela 2024_warsaw     2 Jun  1 23:43 test4
+-r-----r-- 2 ikoszela 2024_warsaw     1 Jun  1 23:44 test5
+lrwxrwxrwx 1 ikoszela 2024_warsaw     5 Jun  1 22:20 test6 -> test0
+c2r2s2% cd ..
+c2r2s2% cd ex03
+c2r2s2% cat id_rsa_pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDtirYGFG5LTBwd5qtQZsfAog8vO0wsEFigRyT/OamzkiMf7pfvsYRXEA1RGzDCihzO8kEdkkeSnorM/KYw6tJNinwYw1ZwOT9dofEOTNWmsxT1hAMMw6qkiqHrdXtut+pM5PHLYdWsVMTJUAp3V9SVB0bExv6CteB1TNJHTZ/Xux2pMPZekqqN0wY0f+vWaQHVHqgiEkpBBguP7MA+Is/OZmJXh4qRQej18ANY6gDDTwsyGF0Fou8+YHWlyNs6PCButPI8H+eCZGdPEtODt57A5OYcivNuCxIqrZXCLLI1OK39KktLO0X898gN+1ZskteqOi1zAhqqRet6Q1HBt7i8GYm6kkfxDmmLnAOHs9LbSREjmdZIxVcQmUBPwVSEuApX7Rh+Vq03p03CEBNTBTemT5MRBz5dsjXf3ehrBG5IE7HdMXqawtPst4W8Qtjdvw2U7nK94cqs6t70v4mUo7wfBj9aY299qDYLpJ0tqntXmu3adOMiMwvZ8kbMvPwviYU= ikoszela@c2r1s4.42warsaw.pl
+c2r2s2% cd ..
+c2r2s2% cd ex04
+c2r2s2% ls
+midLS
+c2r2s2% cat midLS
+ls -tpm
+c2r2s2% cd ..     
+c2r2s2% ls
+ex00  ex01  ex02  ex03	ex04  ex05
+c2r2s2% cd ex05
+c2r2s2% ls
+git_commit.sh
+c2r2s2% cat git_commit.sh
+git log --format="%H" -n 5
+c2r2s2% bash git_commit.sh | cat -e
+524e798b7ec62eca4becdf4bd2ae5b2e5b7c3fbc$
+1d0404f7794bd3906dbe798884e4f40b03b5ca57$
+c2r2s2% 
