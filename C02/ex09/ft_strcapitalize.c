@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoszela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,25 +13,40 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int	ft_str_is_printable(char *str)
+char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (! (str[i] >= 32 && str[i] <= 126))
-			return (0);
+		if ((str[i] >= 'a' && str[i] <= 'z')
+			|| (str[i] >= 'A' && str[i] <= 'Z'))
+		{
+			if (i == 0 || !((str[i - 1] >= 'A' && str[i - 1] <= 'Z')
+					|| (str[i - 1] >= 'a' && str[i - 1] <= 'z')
+					|| (str[i - 1] >= '0' && str[i - 1] <= '9')))
+			{
+				if (str[i] >= 'a' && str[i] <= 'z')
+					str[i] -= 32;
+			}
+			else
+			{
+				if (str[i] >= 'A' && str[i] <= 'Z')
+					str[i] += 32;
+			}
+		}
 		i++;
 	}
-	return (1);
+	return (str);
 }
 /*
 int	main(void)
 {
-	int	i;
+	char	string[] = "salut, comment tu vas ? 42mot";
 
-	i = ft_str_is_printable("ACBjgFM");
-	printf("%d", i);
+	printf("string before change: %s\n", string);
+	ft_strcapitalize(string);
+	printf("%s\n", string);
 	return (0);
 }*/

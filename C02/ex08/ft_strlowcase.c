@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoszela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:35:44 by ikoszela          #+#    #+#             */
-/*   Updated: 2024/10/14 21:36:56 by ikoszela         ###   ########.fr       */
+/*   Created: 2024/10/14 21:37:29 by ikoszela          #+#    #+#             */
+/*   Updated: 2024/10/14 21:40:12 by ikoszela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (! (str[i] >= '0' && str[i] <= '9'))
-			return (0);
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
 		i++;
 	}
-	return (1);
+	return (str);
 }
 /*
 int	main(void)
 {
-	int	i;
-	char	numbers[] = "123aa4";
+	char	string[] = "abnGFJJ";
 
-	i = ft_str_is_numeric(numbers);
-	printf("%d", i);
+	printf("string before change: %s\n", string);
+	ft_strlowcase(string);
+	printf("%s\n", string);
 	return (0);
 }*/

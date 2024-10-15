@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoszela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:35:44 by ikoszela          #+#    #+#             */
-/*   Updated: 2024/10/14 21:36:56 by ikoszela         ###   ########.fr       */
+/*   Created: 2024/10/14 21:37:29 by ikoszela          #+#    #+#             */
+/*   Updated: 2024/10/14 21:40:12 by ikoszela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-int	ft_str_is_numeric(char *str)
+int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (! (str[i] >= '0' && str[i] <= '9'))
+		if (! (str[i] >= 'A' && str[i] <= 'Z'))
 			return (0);
 		i++;
 	}
@@ -30,9 +30,8 @@ int	ft_str_is_numeric(char *str)
 int	main(void)
 {
 	int	i;
-	char	numbers[] = "123aa4";
 
-	i = ft_str_is_numeric(numbers);
+	i = ft_str_is_uppercase("ACBjgFM");
 	printf("%d", i);
 	return (0);
 }*/
