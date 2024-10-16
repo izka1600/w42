@@ -1,5 +1,17 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ikoszela <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/14 21:03:21 by ikoszela          #+#    #+#             */
+/*   Updated: 2024/10/14 21:03:23 by ikoszela         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <unistd.h>
+//#include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
@@ -9,7 +21,7 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = i_temp;
 }
-
+/*
 int	main(void)
 {
 	int	a;
@@ -24,3 +36,4 @@ int	main(void)
 	printf("%i\n", b);
 	return (0);
 }
+*/
