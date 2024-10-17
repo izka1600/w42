@@ -17,6 +17,8 @@ int	ft_strcmp(char *s1, char *s2)
 
 int	main(void)
 {
+/*I check till the moment when one of the strings has '\0' 
+then I brak loop and just return s1[i] - s2[i]*/
 	char	*s1;
 	char	*s2;
 
